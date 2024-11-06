@@ -1,0 +1,53 @@
+/* src/styles/TopDonations.css */
+
+.top-donations-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f3f4f6, #e0f7fa);
+  }
+  
+  .donation-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .donation-donor-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  .donation-amount {
+    font-size: 1rem;
+    color: #00796b; /* A modern, engaging teal color */
+    font-weight: 500;
+  }
+  
+  .donation-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  h2 {
+    color: #00796b;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 576px) {
+    .donation-card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .donation-card {
+      padding: 1.5rem;
+    }
+  }
+  

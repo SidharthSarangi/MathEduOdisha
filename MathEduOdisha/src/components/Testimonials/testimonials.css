@@ -1,0 +1,53 @@
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    gap: 10px; /* Add space between cards */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 100%; /* Full width on small screens */
+    max-width: 300px; /* Max width for cards */
+    min-width: 250px; /* Minimum width for the cards */
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .testimonial-card .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .testimonial-card .fw-bold {
+    color: #343a40;
+  }
+  
+  .position-relative .btn {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 576px) {
+    .testimonial-card {
+      flex: 0 0 45%; /* 2 cards per row on small screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .testimonial-card {
+      flex: 0 0 30%; /* 3 cards per row on medium/large screens */
+    }
+  }
+  

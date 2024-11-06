@@ -1,0 +1,15 @@
+.event-banner {
+  height: 30vh;
+}
+
+@media (min-width: 768px) {
+  .event-banner {
+    height: 35vh; /* Slightly taller on larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .event-banner {
+    height: 40vh; /* Even taller on very large screens */
+  }
+}
