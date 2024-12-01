@@ -1,0 +1,26 @@
+/* src/styles/AboutSection.css */
+
+.about-section {
+    /* background-color: #ffffff; */
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    text-align: center;
+    border-radius: 12px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .welcome-heading {
+    font-size: 2rem;
+    color: #141401; /* Purple color */
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .about-content {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  

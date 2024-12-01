@@ -2,63 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { fetchEvents } from "../../api/events";
 import { EventType as Event } from "../../types/eventType";
-import EventBanner from "../../components/EventBanner";
+import ImageBanner from "../../components/ImageBanner";
 import TestimonialsSection from "../../components/Testimonials";
-import FeaturedItem from "../../components/FeaturedItem";
-import bannerPhoto from "../../assets/bannerPhoto.jpg";
-import bookCover from "../../assets/bookCover.jpg";
-import book from "../../assets/book.jpg";
-import bookover from "../../assets/bookover.jpg";
-import TopDonations from "../../components/TopDonations";
 import "./home.css";
+import AboutSection from "../../components/AboutSection";
+import Events from "../../components/Events";
 
 const Home: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<Boolean>(false);
 
   const sectionsRef = useRef<HTMLDivElement[]>([]);
-
-  const featuredBooks = [
-    {
-      title: "Book 1",
-      description: "An engaging book about...",
-      imageUrl: bookCover,
-      link: "/books/1",
-    },
-    {
-      title: "Book 2",
-      description: "An exciting adventure...",
-      imageUrl: book,
-      link: "/books/2",
-    },
-    {
-      title: "Book 3",
-      description: "A fascinating story...",
-      imageUrl: bookover,
-      link: "/books/3",
-    },
-  ];
-
-  const featuredMagazines = [
-    {
-      title: "Magazine 1",
-      description: "A popular magazine...",
-      imageUrl: bannerPhoto,
-      link: "/magazines/1",
-    },
-    {
-      title: "Magazine 2",
-      description: "The latest issue covers...",
-      imageUrl: bannerPhoto,
-      link: "/magazines/2",
-    },
-    {
-      title: "Magazine 3",
-      description: "Discover insights on...",
-      imageUrl: bannerPhoto,
-      link: "/magazines/3",
-    },
-  ];
 
   const testimonialsData = [
     {
@@ -121,53 +75,22 @@ const Home: React.FC = () => {
     <Container fluid className="p-0">
       {/* <div className="animate__animated animate__fadeInUp animate__delay-1s"> */}
       <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>
-        <EventBanner event={events} />
+        <ImageBanner event={events} />
+      </div>
+
+      <div className="about-events-container">
+        <AboutSection />
+        <Events />
       </div>
 
       {/* Featured Books Section */}
-      {/* <div className="animate__animated animate__fadeInUp animate__delay-2s"> */}
-      <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>
-        <Container className="mt-5">
-          <h2 className="text-center mb-4">Featured Books</h2>
-          <Row className="justify-content-center">
-            {featuredBooks.map((book, index) => (
-              <Col key={index} xs={12} md={4}>
-                <FeaturedItem
-                  title={book.title}
-                  description={book.description}
-                  imageUrl={book.imageUrl}
-                  link={book.link}
-                />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
 
       {/* Featured Magazines Section */}
-      {/* <div className="animate__animated animate__fadeInUp animate__delay-3s"> */}
-      <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>
-        <Container className="mt-5">
-          <h2 className="text-center mb-4">Featured Magazines</h2>
-          <Row className="justify-content-center">
-            {featuredMagazines.map((magazine, index) => (
-              <Col key={index} xs={12} md={4}>
-                <FeaturedItem
-                  title={magazine.title}
-                  description={magazine.description}
-                  imageUrl={magazine.imageUrl}
-                  link={magazine.link}
-                />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
 
       {/* <div className="animate__animated animate__fadeInUp animate__delay-4s"> */}
-      <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>
+      {/* <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>
         <TopDonations />
-      </div>
+      </div> */}
 
       {/* <div className="animate__animated animate__fadeInUp animate__delay-5s"> */}
       <div className="fade-in" ref={(el) => el && sectionsRef.current.push(el)}>

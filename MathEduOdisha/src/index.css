@@ -8,10 +8,8 @@ body {
   line-height: 1.6;
 }
 
-
-
 .navbar {
-  background: linear-gradient(1deg, rgb(95, 90, 74), rgb(241, 249, 251)); /* Blue to purple gradient */
+  background: linear-gradient(1deg, rgb(95, 90, 74), rgb(35, 37, 37)); /* Blue to purple gradient */
   padding: 1rem;
 }
 
@@ -38,6 +36,17 @@ body {
 
 .navbar-toggler-icon {
   background-color: #ffffff;
+}
+
+.about-dropdown .dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f2f3ce;
+}
+
+.about-dropdown .dropdown-menu {
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

@@ -1,28 +1,28 @@
-// src/pages/Book.tsx
+// src/pages/AboutUsPage.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "./book.css";
+import "./aboutUs.css";
 
-const Book: React.FC = () => {
+const AboutUsPage: React.FC = () => {
   return (
-    <div className="book-container">
+    <div className="about-us-container">
       {/* Sidebar Navigation */}
-      <div className="book-sidebar">
+      <div className="about-us-sidebar">
         <nav>
           <ul>
             <li>
-              <Link to="/books/olympaid" className="sidebar-link">
-                Olympaid
+              <Link to="/about-ocmse" className="sidebar-link">
+                About OCMSE
               </Link>
             </li>
             <li>
-              <Link to="/books/history" className="sidebar-link">
-                History
+              <Link to="/trustees" className="sidebar-link">
+                Trustees
               </Link>
             </li>
             <li>
-              <Link to="/books/general" className="sidebar-link">
-                General
+              <Link to="/advisory-board" className="sidebar-link">
+                Advisory Board
               </Link>
             </li>
           </ul>
@@ -30,7 +30,7 @@ const Book: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="book-content">
+      <div className="about-us-content">
         <h1>Welcome to OCMSE</h1>
         <p>
           OCMSE is dedicated to fostering knowledge, empowering individuals, and
@@ -43,8 +43,8 @@ const Book: React.FC = () => {
         </p>
 
         {/* Sections */}
-        <div className="book-section">
-          <h2>Olympaids</h2>
+        <div className="about-us-section">
+          <h2>About OCMSE</h2>
           <p>
             The Open Collaborative Model for Scholarly Endeavors (OCMSE) is a
             platform aimed at revolutionizing how educational resources are
@@ -52,34 +52,34 @@ const Book: React.FC = () => {
             accessibility, OCMSE strives to bridge the gap between knowledge and
             the people who need it.
           </p>
-          <Link to="/books/olympaid" className="section-link">
-            Explore more books in olympaids
+          <Link to="/about-ocmse" className="section-link">
+            Learn More
           </Link>
         </div>
 
-        <div className="book-section">
-          <h2>History</h2>
+        <div className="about-us-section">
+          <h2>Our Trustees</h2>
           <p>
             Our esteemed board of trustees comprises visionaries and leaders
             dedicated to steering OCMSE towards its mission. Their expertise and
             commitment ensure that the platform remains true to its values of
             innovation, collaboration, and inclusivity.
           </p>
-          <Link to="/books/history" className="section-link">
-            Explore more books in History
+          <Link to="/trustees" className="section-link">
+            Meet Our Trustees
           </Link>
         </div>
 
-        <div className="book-section">
-          <h2>General</h2>
+        <div className="about-us-section">
+          <h2>Advisory Board</h2>
           <p>
             The advisory board brings together a diverse group of experts who
             provide strategic guidance and innovative ideas. Their collective
             wisdom and varied perspectives are instrumental in shaping OCMSE’s
             future.
           </p>
-          <Link to="/books/general" className="section-link">
-            Explore more books in General
+          <Link to="/advisory-board" className="section-link">
+            Learn About Our Advisory Board
           </Link>
         </div>
       </div>
@@ -87,4 +87,4 @@ const Book: React.FC = () => {
   );
 };
 
-export default Book;
+export default AboutUsPage;

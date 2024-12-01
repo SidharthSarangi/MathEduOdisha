@@ -28,7 +28,7 @@ const FeaturedItem: React.FC<FeaturedItemProps> = ({
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description.slice(0, 80)}...</Card.Text>
-        <a href={link} className="btn btn-primary btn-sm">
+        <a href={link} className="btn btn-dark btn-sm">
           Read More
         </a>
       </Card.Body>

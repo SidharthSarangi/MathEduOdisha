@@ -1,0 +1,121 @@
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgb(250, 248, 240);
+  }
+  
+  /* Sidebar Styling */
+  .book-sidebar {
+    flex: 1 1 20%;
+    max-width: 200px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky; /* Sticky positioning */
+    top: 50%; /* Position relative to viewport */
+    transform: translateY(-50%); /* Center vertically */
+    padding: 15px;
+  }
+  
+  .book-sidebar nav {
+    width: 100%;
+  }
+  
+  .book-sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .book-sidebar nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-link {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    color: #6a11cb;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #e2e6ea;
+    color: #4a0f93;
+  }
+  
+  /* Content Styling */
+  .book-content {
+    flex: 3 1 75%;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .book-content h1 {
+    font-size: 2rem;
+    color: #130225;
+  }
+  
+  .book-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .book-section {
+    margin-top: 30px;
+  }
+  
+  .book-section h2 {
+    font-size: 1.5rem;
+    color: #130225;
+    margin-bottom: 10px;
+  }
+  
+  .book-section p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .section-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #130225;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .section-link:hover {
+    background-color: #4a0f93;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .book-container {
+      flex-direction: column;
+    }
+  
+    .book-sidebar {
+      flex: 1 1 100%;
+      position: relative; /* Disable sticky on small screens */
+      top: 0;
+      transform: none; /* Reset vertical centering */
+      margin-bottom: 20px;
+    }
+  
+    .book-content {
+      flex: 1 1 100%;
+    }
+  }
+  

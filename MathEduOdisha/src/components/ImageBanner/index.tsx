@@ -1,13 +1,13 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { EventType as event } from "../../types/eventType";
-import "./eventBanner.css";
+import "./imageBanner.css";
 
 interface EventBannerProps {
   event: event[];
 }
 
-const EventBanner: React.FC<EventBannerProps> = ({ event }) => {
+const ImageBanner: React.FC<EventBannerProps> = ({ event }) => {
   return (
     <Carousel data-bs-theme="dark">
       {event.map((event, idx) => (
@@ -17,14 +17,14 @@ const EventBanner: React.FC<EventBannerProps> = ({ event }) => {
             src={event.imageURL}
             alt="First slide"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>{event.title}</h3>
             <p>{event.description}</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
       ))}
     </Carousel>
   );
 };
 
-export default EventBanner;
+export default ImageBanner;

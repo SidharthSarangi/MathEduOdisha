@@ -11,6 +11,8 @@ import Authors from "../pages/Authors";
 import LoginPage from "../pages/Login";
 import SignupPage from "../pages/SignUp";
 import NotFound from "../pages/NotFound";
+import AboutUs from "../pages/AboutUs";
+import PublicationPage from "../pages/Publication";
 
 const AppRouter: React.FC = () => {
   return (
@@ -18,6 +20,8 @@ const AppRouter: React.FC = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/publication" element={<PublicationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/books" element={<Book />} />

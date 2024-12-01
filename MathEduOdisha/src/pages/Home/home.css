@@ -11,3 +11,20 @@
     transform: translateY(0);
   }
   
+.about-events-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.about-events-container > div {
+  flex: 1 1 calc(50% - 1.5rem); /* Take half the width on larger screens */
+}
+
+@media (max-width: 768px) {
+  .about-events-container > div {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}
