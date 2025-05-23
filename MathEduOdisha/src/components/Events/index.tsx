@@ -12,6 +12,7 @@ const Events: React.FC = () => {
     { id: 6, title: "Math Guru", date: "August 5, 2024" },
     { id: 7, title: "Equation Fusion", date: "September 16, 2024" },
   ];
+  // from database - events
 
   return (
     <div className="scrollable-events">

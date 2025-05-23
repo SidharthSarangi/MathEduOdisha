@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
     <div className="about-section">
       <h1 className="welcome-heading">Welcome to OCMSE</h1>
       <p className="about-content">
-        OCMSE (Online Community for Modern Scholarly Excellence) is dedicated to
+        OCMSE (Odisha Community for Modern Scholarly Excellence) is dedicated to
         fostering a vibrant community of readers, writers, and contributors who
         share a passion for books, magazines, and impactful events. Our mission
         is to connect like-minded individuals, provide access to valuable
