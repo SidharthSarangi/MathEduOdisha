@@ -1,0 +1,80 @@
+server:
+  port: 8085 # Gateway listens on port 8085
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: book-service-route
+              uri: http://book-service:8081
+              predicates:
+                - Path=/api/books/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation
+
+            # Book file: protected PDF download
+            - id: book-file-download
+              uri: http://book-service:8081
+              predicates:
+                - Path=/api/books-file/download/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation
+
+            # Book file: public cover image
+            - id: book-file-cover
+              uri: http://book-service:8081
+              predicates:
+                - Path=/api/books-file/cover/**
+              filters:
+                - StripPrefix=1
+
+            - id: magazine-service-route
+              uri: http://magazine-service:8082
+              predicates:
+                - Path=/api/magazines/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation
+
+            # Magazine file: protected download
+            - id: magazine-file-download
+              uri: http://magazine-service:8082
+              predicates:
+                - Path=/api/magazines-file/download/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation
+
+            # Magazine file: public cover
+            - id: magazine-file-cover
+              uri: http://magazine-service:8082
+              predicates:
+                - Path=/api/magazines-file/cover/**
+              filters:
+                - StripPrefix=1
+
+            - id: search-service-route
+              uri: http://search-service:8083
+              predicates:
+                - Path=/api/search/**
+              filters:
+                - StripPrefix=1
+
+            - id: user-service-route
+              uri: http://user-service:8084
+              predicates:
+                - Path=/api/auth/**
+              filters:
+                - StripPrefix=1
+
+            - id: cart-service-route
+              uri: http://cart-service:8087
+              predicates:
+                - Path=/api/cart/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation

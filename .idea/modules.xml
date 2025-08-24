@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/OCMSEBackend.iml" filepath="$PROJECT_DIR$/.idea/OCMSEBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book-service/book-service.iml" filepath="$PROJECT_DIR$/book-service/book-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/magazine-service/magazine-service.iml" filepath="$PROJECT_DIR$/magazine-service/magazine-service.iml" />
+    </modules>
+  </component>
+</project>
